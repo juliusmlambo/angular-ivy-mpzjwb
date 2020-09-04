@@ -1,5 +1,5 @@
 
-<div  *ngFor="let Employees of Employees"> 
+<div  *ngFor="let employee of employees"> 
 <mat-card class="example-card" class="block">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -15,11 +15,11 @@
   
   <mat-card-content >
     
-<span class="name">{{Employees.EmployeeName + " " + Employees.EmployeeSurname}}</span>
+<span class="name">{{employee.name + " " + employee.surname}}</span>
     <br>
-    {{Employees.Position}}
+    {{employee.position}}
     <br>
-    {{Employees.Age}}
+    {{employee.age}}
     <br>
     <br>  
     </mat-card-content>
@@ -27,7 +27,7 @@
   
   <mat-card-actions>
     <button mat-button class="update">UPDATE</button>
-    <button mat-button class="delete">DELETE</button>
+    <button mat-button class="delete" (click)="delete(employee);">DELETE</button>
     
   </mat-card-actions>
 </mat-card>

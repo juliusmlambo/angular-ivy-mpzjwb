@@ -9,16 +9,24 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
   
+employees = [{name:"Julius", surname:"Mlambo", position:"CEO", age:27},
+                   {name:"Peter", surname:"Brown", position:"Executive Director", age:32},
+                   {name:"Angel", surname:"Zulu", position:"Managing Director", age:22},
+                   {name:"Stanly", surname:"Scott", position:"Chief Financial Office", age:28},
+                   {name:"Amanda", surname:"Solo", position:"Online Manager", age:29},
+                   {name:"Chris", surname:"Malana", position:"Chief Technology officer", age:33},
+                   {name:"Noma", surname:"Mzobe", position:"Developer", age:22},
+                   {name:"Arthur", surname:"Mazibuko", position:"Front-end developer", age:23},
+                   {name:"Anathi", surname:"Xulu", position:"Software Developer", age:21},
+                   {name:"Amo", surname:"Zwane", position:"Intern", age:19},
+  ];
 
- Employees = [{EmployeeName:"John", EmployeeSurname:"Bale",Position:"Clerk", Age:"25"  },
-            {EmployeeName:"candy", EmployeeSurname:"carls",Position:"HR", Age:"20"  },
-            {EmployeeName:"Johannes", EmployeeSurname:"Bingo",Position:"Developer", Age:"30" },
-            {EmployeeName:"Peter", EmployeeSurname:"Selolo",Position:"Data analyst", Age:"39" },
-            {EmployeeName:"Lebo", EmployeeSurname:"Sekgobela",Position:"Data capture", Age:"27" },
-            {EmployeeName:"Courtney", EmployeeSurname:"Mohommed",Position:"Software engineer", Age:"23" },
-            {EmployeeName:"Lawrence", EmployeeSurname:"maambira",Position:"Lawyer", Age:"26" },
-            {EmployeeName:"Elius", EmployeeSurname:"Daud",Position:"PR", Age:"30" },
-            {EmployeeName:"Jam", EmployeeSurname:"Tom",Position:"Cleaner", Age:"24" },
-            {EmployeeName:"Elisa", EmployeeSurname:"Serongwa",Position:"Technician", Age:"40" }
-                ];
+  delete(name){
+  const index = this.employees.indexOf(name, 0);
+  if(index > -1)
+  this.employees.splice(index, 1);
+
+}
+
+ 
 }
